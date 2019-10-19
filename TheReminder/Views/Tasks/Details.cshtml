@@ -1,0 +1,49 @@
+﻿@model TheReminder.Models.Task
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Task</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompleteStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompleteStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TaskId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
